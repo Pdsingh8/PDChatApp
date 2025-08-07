@@ -19,7 +19,8 @@ import {
 type ChartData =
   | {
       type: "line" | "bar" | "pie";
-      data: { [key: string]: any }[];
+      // data: { [key: string]: any }[];
+      data: { [key: string]: string | number }[];
       xKey: string;
       yKey: string;
     }

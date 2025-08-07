@@ -1,5 +1,3 @@
-"use client";
-
 type TableProps = {
   headers: string[];
   rows: string[][];

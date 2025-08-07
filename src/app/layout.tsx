@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "./globals.css";
 import {
   ClerkProvider,
@@ -6,11 +5,9 @@ import {
   SignedOut,
   RedirectToSignIn,
 } from "@clerk/nextjs";
-import { Inter } from "next/font/google";
+
 import Navigation from "./navigation/page";
 import { Providers } from "./providers";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Gemini Chat App",

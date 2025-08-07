@@ -5,7 +5,6 @@ import ReactMarkdown from "react-markdown";
 import { jsPDF } from "jspdf";
 import { FiDownload } from "react-icons/fi";
 import ChartComponent from "./ChartComponent";
-import TableComponent from "./TableComponent";
 
 type ChatWindowProps = {
   messages: { role: string; text: string }[];
