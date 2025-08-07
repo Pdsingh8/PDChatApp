@@ -10,7 +10,7 @@ export default function home() {
         </h1>
 
         <Link href="/chat">
-          <p className="text-blue-300 font-bold hover:text-black mb-5 mt-5">
+          <p className="text-blue-300 font-bold hover:text-black mb-5 mt-5 dark:hover:text-white">
             ChatApp
           </p>
         </Link>

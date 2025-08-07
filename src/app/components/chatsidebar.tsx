@@ -23,25 +23,25 @@ export default function ChatSidebar({
   currentChatId,
 }: ChatSidebarProps) {
   return (
-    <aside className="w-1/4 bg-gray-100 p-4 overflow-y-auto border-r">
+    <aside className="w-1/4 bg-gray-100 p-4 overflow-y-auto border-r dark:bg-gray-600">
       <button
         onClick={onNewChat}
-        className="w-full mb-4 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition"
+        className="w-full mb-4 px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition dark:text-white dark:bg-blue-700  dark:hover:bg-blue-300 dark:hover:text-black"
       >
         + New Chat
       </button>
-      <ul className="space-y-2 ">
+      <ul className="space-y-2 dark:bg-slate-900  ">
         {chats.map((chat) => (
           <li
             key={chat.id}
             onClick={() => onSelectChat(chat)}
-            className={`p-3 rounded cursor-pointer flex items-center justify-between transition-colors${
+            className={`p-3 rounded cursor-pointer flex items-center justify-between transition-colors dark:text-slate-200  ${
               chat.id === currentChatId
-                ? "bg-blue-200 font-semibold"
-                : "hover:bg-gray-200"
+                ? "bg-blue-200 font-semibold "
+                : "hover:bg-gray-200 dark:hover:text-black dark:border-black dark:border-b-black  "
             }`}
           >
-            <div className="text-sm font-medium truncate  w-full">
+            <div className="text-sm font-medium truncate  w-full ">
               {chat.title || "Untitled Chat"}
             </div>
             <div>

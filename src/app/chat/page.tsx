@@ -123,7 +123,10 @@ export default function Home() {
     try {
       // Get AI response
       const botReply = await getGeminiResponse(newMessages);
-      const finalMessages = [...newMessages, { role: "bot", text: botReply }];
+      const finalMessages = [
+        ...newMessages,
+        { role: "Assistant", text: botReply },
+      ];
       const finalChat = { ...updatedChat, messages: finalMessages };
 
       // Update chat list
@@ -161,7 +164,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex h-screen">
+    <main className="flex h-[87vh]">
       <ChatSidebar
         chats={chats}
         onSelectChat={handleSelectChat}
